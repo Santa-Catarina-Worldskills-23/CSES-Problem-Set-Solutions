@@ -9,7 +9,7 @@ int main() {
     vector<int> v;
     cin >> value;
 
-    for (int i=2; i<value; i++) {
+    for (int i=0; i<value; i++) {
         v.push_back(i);
         cout << v[i];
     }
