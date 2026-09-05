@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-#define endl " "
+#define endl "\n"
 
 string v{}; char lastString{};
 long long sequence{}, lastSequence{};
@@ -14,21 +14,23 @@ int main() {
 
         if (lastString == v[i]) {
             sequence++;
+
+            if (sequence > lastSequence) {
+                lastSequence = sequence;
+            }
+
         } else {
             sequence = 1;
         }
 
         lastString = v[i];
 
-        if (sequence < lastSequence) {
-            sequence = lastSequence;
-        }
-
-        lastSequence = sequence;
-
-
     }
 
-    cout << sequence;
+    if (lastSequence == 0) {
+        lastSequence = 1;
+    }
+
+    cout << lastSequence << endl;
 
 }
