@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-#define endl " "
+#define endl "\n"
 
 long long value = 0, vectorValue = 0, realSum = 0, expecSum = 0;
 
