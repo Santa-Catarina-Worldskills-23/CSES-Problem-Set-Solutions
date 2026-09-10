@@ -5,41 +5,55 @@ using namespace std;
 int main()
 {
 
-    int tFor;
-    int i = 0;
-    int j = 0;
+    long long tFor;
+    long long i = 0;
+    long long j = 0;
     cin >> tFor;
-    
-    int z[tFor];
+    long long z[tFor];
+    long long vConta;
 
-    for (int o = 0; o < tFor; o++){
-
+    for (long   o = 0; o < tFor ; o++){
         cin >> i >> j;
 
         if(i > j){
-                if(i % 2 == 0){
-                    z[o] = pow(i, 2) - (j - 1);
-                }else{
-                    i = i - 1;
-                    cout << i;
-                    z[o] = pow(i, 2) + (j + 1);   
+            if(i % 2 == 0){
+                z[o] = (i * i) - (j - 1);
+            }else{
+                    vConta = 0;
+                    vConta = i - 1;
+                    z[o] = (vConta * vConta) + (j);
                 }
+                
             }
-        
-        if (i == j) {
 
-            if (i % 2 == 0)
-            {
-                z[o] = pow(i, 2) - (j - 1) ;
+            if(j > i){
+                if(j % 2 == 0){
+                        vConta = 0;
+                        vConta = j - 1;
+                        z[o] = (vConta * vConta) + (i);
+                    }else{
+                        z[o] = (j*j) - (i - 1);
+                    }
+                    
             }
-            else
-            {
-                z[o] = pow(i, 2) - (j - 1);
-            }
-        }
-    }
-    for (int o = 0; o < tFor; o++)
+           if(i == j){
+               if (i % 2 == 0)
+               {
+                   z[o] = (i*i) - (j - 1) ;
+               }
+               else
+               {
+                   z[o] = (i*i) - (j - 1);
+                }
+              
+           }
+         }
+
+    
+
+    for (long o = 0; o < tFor; o++)
     {
         cout << z[o] << endl;
     }
+
 }
