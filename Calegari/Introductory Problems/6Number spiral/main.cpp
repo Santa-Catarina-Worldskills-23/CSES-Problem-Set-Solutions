@@ -5,55 +5,53 @@ using namespace std;
 int main()
 {
 
-    int tFor;
-    int i = 0;
-    int j = 0;
+    long long tFor;
+    long long i = 0;
+    long long j = 0;
     cin >> tFor;
-    bool quebraIf = true;
-    int z[tFor];
+    long long z[tFor];
+    long long vConta;
 
-    for (int o = 0; o < tFor && quebraIf ; o++){
-
+    for (long   o = 0; o < tFor ; o++){
         cin >> i >> j;
 
         if(i > j){
             if(i % 2 == 0){
-                z[o] = pow(i, 2) - (j - 1);
+                z[o] = (i * i) - (j - 1);
             }else{
-                    i = i - 1;
-                    z[o] = pow(i, 2) + (j + 1);   
+                    vConta = 0;
+                    vConta = i - 1;
+                    z[o] = (vConta * vConta) + (j);
                 }
-                quebraIf = false;
-                break;
+                
             }
 
             if(j > i){
                 if(j % 2 == 0){
-                        j = j - 1;
-                        z[o] = pow(j, 2) + (i + 1);
+                        vConta = 0;
+                        vConta = j - 1;
+                        z[o] = (vConta * vConta) + (i);
                     }else{
-                        z[o] = pow(j, 2) - (i - 1);
+                        z[o] = (j*j) - (i - 1);
                     }
-                    quebraIf = false;
-                    break;  
+                    
             }
            if(i == j){
                if (i % 2 == 0)
                {
-                   z[o] = pow(i, 2) - (j - 1) ;
+                   z[o] = (i*i) - (j - 1) ;
                }
                else
                {
-                   z[o] = pow(i, 2) - (j - 1);
-               }
-               quebraIf = false;
-               break;
+                   z[o] = (i*i) - (j - 1);
+                }
+              
            }
          }
 
     
 
-    for (int o = 0; o < tFor; o++)
+    for (long o = 0; o < tFor; o++)
     {
         cout << z[o] << endl;
     }
