@@ -2,7 +2,7 @@
 using namespace std;
 #define endl "\n"
 
-    long long tFor, i = 0, j = 0, vConta;
+long long tFor, i = 0, j = 0, vConta;
 
 int main() {
 
