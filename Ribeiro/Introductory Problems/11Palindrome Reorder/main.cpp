@@ -31,13 +31,16 @@ int main() {
                 
             while (quantidade[i] > 0) {
 
-                if (n == value.size() - 1 - n) {
-                    value[n] = alfabeto[i];
+                if (quantidade[i] % 2 == 1) {
+                    value[value.size()/2] = alfabeto[i];
                     quantidade[i] -= 1;
                     n++;
-                } else {
+                } else if (n != value.size() - 1 - n){
                     value[n] = alfabeto[i];
                     value[value.size() - 1 - n] = alfabeto[i];
+                    quantidade[i] -= 2;
+                    n++;
+                } else {
                     quantidade[i] -= 2;
                     n++;
                 }
