@@ -12,7 +12,7 @@ int main(){
     for(int i = 0; i < tamanhoArray; i++){
         cin >> valor;
 
-        diferenca = ultimoValorz - valor;
+        diferenca = ultimoValor - valor;
 
         if(diferenca > 0){
             valor += diferenca;
