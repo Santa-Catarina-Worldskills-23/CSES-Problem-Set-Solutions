@@ -51,5 +51,4 @@ int main() {
     for (long long n{}; n<t; n++) {
         cout << result[n] << endl;
     }
-
 }
