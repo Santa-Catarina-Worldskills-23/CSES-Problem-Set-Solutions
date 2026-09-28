@@ -9,7 +9,7 @@ int main() {
 
     cin >> graySize;
 
-    vector<int> abadi;
+    vector<int> abadi, convertido;
 
     int p{}, multiplicador{};
 
@@ -17,6 +17,7 @@ int main() {
         
         p = i;
         abadi.clear();
+        convertido.clear();
         multiplicador = graySize - 1;
 
         for (int n{}; n<graySize; n++) {
@@ -29,8 +30,12 @@ int main() {
             multiplicador -= 1;
         }
 
-        for (int n{}; n<abadi.size(); n++) {
-            cout << abadi[n];
+        for (int n{}; n<graySize; n++) {
+            convertido.push_back(abadi[n-1] ^ abadi[n]);
+        }
+
+        for (int n{}; n<convertido.size(); n++) {
+            cout << convertido[n];
         }
         cout << "\n";
     }
