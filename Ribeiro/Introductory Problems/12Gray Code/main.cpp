@@ -3,9 +3,7 @@
 using namespace std;
 #define endl "\n";
 
-int graySize = 11, base{};
-bool encontrou{};
-
+int graySize{};
 
 int main() {
 
@@ -18,11 +16,13 @@ int main() {
     for (int i{}; i<pow(2,graySize); i++) {
         
         p = i;
+        abadi.clear();
+        multiplicador = graySize - 1;
 
         for (int n{}; n<graySize; n++) {
-            multiplicador = 16 - graySize;
-            if (p - pow(2, graySize) >= 0) {
+            if (p - pow(2, multiplicador) >= 0) {
                 abadi.push_back(1);
+                p -= pow(2, multiplicador);
             } else {
                 abadi.push_back(0);
             }
@@ -32,5 +32,6 @@ int main() {
         for (int n{}; n<abadi.size(); n++) {
             cout << abadi[n];
         }
+        cout << "\n";
     }
 }
