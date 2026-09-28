@@ -2,9 +2,11 @@
 using namespace std;
 #define endl "\n"
 
-  string texto{}; char ultimaString;
-  long long sequencia{}, ultimaSequencia{};
-
+  string texto{}; 
+  char ultimaString;
+  long long sequencia{}
+  ultimaSequencia{};
+ 
 int main(){
 
     cin >> texto;
