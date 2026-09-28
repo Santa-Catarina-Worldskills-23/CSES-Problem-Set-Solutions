@@ -9,7 +9,7 @@ using namespace std;
  
 int main(){
 
-    cin >> texto;
+    cin >> texto; 
 
   for (int i = 0; i < texto.size(); i++) {
         if (texto[i] == ultimaString) {
