@@ -29,6 +29,8 @@ int main() {
             }
             n++;
             cout << movA << spc << movB << endl;
+        } else {
+            
         }
     }
 
