@@ -3,7 +3,8 @@ using namespace std;
 #define endl "\n"
 #define spc " "
 
-int value{}, movA{}, movB{}, n{};
+int value{}, movA{}, movB{}, n{}, lastPos{};
+vector<int> A,B,C;
 
 int main() {
 
@@ -30,7 +31,10 @@ int main() {
             n++;
             cout << movA << spc << movB << endl;
         } else {
-            
+            lastPos = movB;
+            if (lastPos == 1) {
+                
+            }
         }
     }
 
